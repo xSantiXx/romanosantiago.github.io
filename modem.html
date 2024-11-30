@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Módem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="menu.html">Página Principal</a></li>
+            <li><a href="simulador.html">Existentes</a></li>
+            <li><a href="crear_modem.html" class="active">Simulado</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&id=1VsXW3t7K-yoeLMwxcbK_b06VMHxMDQ4E">Descargar Manual de usuario</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Simulador de Modem Configurable</h1>
+
+        <div class="form-group">
+            <label for="modulationSelect">Selecciona una modulación:</label>
+            <select id="modulationSelect">
+                <option value="" disabled selected>Selecciona una modulación</option>
+                <option value="ASK">ASK</option>
+                <option value="FSK">FSK</option>
+                <option value="2-PSK">2-PSK</option>
+                <option value="4-PSK">4-PSK</option>
+                <option value="8-PSK">8-PSK</option>
+                <option value="4-QAM">4-QAM</option>
+                <option value="8-QAM">8-QAM</option>
+                <option value="16-QAM">16-QAM</option>
+                <option value="32-QAM">32-QAM</option>
+                <option value="64-QAM">64-QAM</option>
+                <option value="128-QAM">128-QAM</option>
+                <option value="256-QAM">256-QAM</option>
+                <option value="1024-QAM">1024-QAM</option>
+                <option value="4096-QAM">4096-QAM</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="modeSelect">Selecciona el modo:</label>
+            <select id="modeSelect">
+                <option value="" disabled selected>Seleccione el modo de transmisión</option>
+                <option value="Full-Dúplex">Full-Dúplex</option>
+                <option value="Half-Dúplex">Half-Dúplex</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="baudRateInput">Velocidad en baudios:</label>
+            <input type="number" id="baudRateInput" placeholder="Ingrese la velocidad en baudios" disabled />
+        </div>
+        
+
+        <button id="showResultsButton" class="button">Mostrar Resultados</button>
+        <div id="resultsContainer" class="results"></div>
+        <div class="chart-container">
+            <canvas id="transmissionChart" width="600" height="300"></canvas>
+        </div>
+    </div>
+    <label class="signature">Santiago Romano - 53602 - 3k1</label>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="modem.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Módems</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="menu.html">Página Principal</a></li>
+            <li><a href="simulador.html" class="active">Existentes</a></li>
+            <li><a href="modem.html">Simulado</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&id=1VsXW3t7K-yoeLMwxcbK_b06VMHxMDQ4E">Descargar Manual de usuario</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Simulador de Módems Existentes</h1>
+        <div class="formgroup">
+            <label for="modemSelect">Selecciona un módem:</label>
+            <select id="modemSelect">
+                <option value="" disabled selected>Selecciona un módem</option>
+                <option value="modem1">Módem V.21 - Full-Dúplex</option>
+                <option value="modem2">Módem V.22 - Full-Dúplex</option>
+                <option value="modem3">Módem V.22 bis - Full-Dúplex</option>
+                <option value="modem4">Módem V.32 - Full-Dúplex</option>
+                <option value="modem5">Módem V.32 bis - Full-Dúplex</option>
+                <option value="modem6">Módem V.32 terbo - Full-Dúplex</option>
+                <option value="modem7">Módem V.33 - Full-Dúplex</option>
+                <option value="modem8">Módem V.34 - Full-Dúplex</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="modulationSelect">Selecciona una modulación:</label>
+            <select id="modulationSelect">
+                <option value="" disabled selected>Selecciona una modulación</option>
+            </select>
+        </div>
+        <div class="chart-container">
+            <canvas id="transmissionChart" width="600" height="300"></canvas>
+        </div>
+        <button id="showResultsButton" class="button">Mostrar Resultados</button>
+        <div id="resultsContainer" class="results"></div>
+    </div>
+    <label class="signature">Santiago Romano -53602 - 3k1</label>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
